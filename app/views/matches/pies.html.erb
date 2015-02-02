@@ -1,0 +1,13 @@
+<p>Breakdown of match durations</p>
+<% counter = 0 %>
+<% @count.times do %>
+  <div><%= "#{@labels[counter]}: #{@data[counter]}" %></div>
+  <% counter += 1 %>
+<% end %>
+<p>Pie chart below</p>
+
+<script>
+
+  fetchPie("/matches/endpoint");
+
+</script>

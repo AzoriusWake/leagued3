@@ -1,0 +1,13 @@
+<p>Breakdown of player ranks</p>
+<% counter = 0 %>
+<% @count.times do %>
+  <div><%= "#{@labels[counter]}: #{@data[counter]}" %></div>
+  <% counter += 1 %>
+<% end %>
+<p>Pie chart below (combined diamond, challenger, and master)</p>
+
+<script>
+
+  fetchPie("/players/endpoint");
+
+</script>
